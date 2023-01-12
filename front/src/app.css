@@ -1,0 +1,217 @@
+/* GENERAL */
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+
+nav{
+  display: flex;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+nav div{
+  flex: 1;
+  align-self: center;
+  margin: auto 5rem;
+}
+
+.right-side-nav ul{
+  display: flex;
+}
+
+.right-side-nav ul li{
+  flex: 1;
+  list-style: none;
+  text-align: center;
+}
+
+.left-side-nav a{
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.hero-two{
+  align-self: center;
+}
+
+/* BODY */
+
+.body-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stack{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.stack ul{
+  display: flex;
+  margin: 5rem;
+  padding: 0;
+}
+
+.stack ul li{
+  list-style: none;
+  font-size: 50px;
+  flex: 1;
+}
+
+.stack ul li img{
+  width: 50px;
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 5rem;
+}
+
+.projects-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.education{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 4rem auto;
+}
+
+.education ul{
+  display: flex;
+  padding: 0;
+  margin: 4rem;
+}
+
+.education ul li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 auto;
+}
+
+.education ul li i{
+  font-size: 40px;
+  margin: 1rem;
+}
+
+.education ul li h3{
+  margin: 1rem 2rem;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 3rem 1rem;
+}
+
+.about div{
+  display: flex;
+  margin: 3rem 6rem;
+}
+
+.about div p{
+  flex: 1;
+}
+
+.about h1{
+  text-align: center;
+}
+
+.about p{
+  font-size: 18px;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0;
+}
+
+.contact h1{
+  text-align: center;
+}
+
+.contact ul{
+  display: flex;
+  margin: 5rem 20rem;
+  padding: 0;
+}
+
+.contact ul li{
+  flex: 1;
+  text-align: center;
+  list-style: none;
+}
+
+.contact ul li i{
+  font-size: 32px;
+  margin: 0.5rem;
+}
+
+.contact ul li a{
+  color: black;
+}
+
+.contact button{
+  width: 200px;
+  height: 3rem;
+  font-size: 21px;
+  margin: 1rem auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer{
+  display: flex;
+  flex-direction: column;
+}
+
+footer h2{
+  text-align: center;
+}
+
+footer ul{
+  display: flex;
+  margin: 2rem 20rem;
+  padding: 0;
+}
+
+footer ul li{
+  flex: 1;
+  text-align: center;
+  list-style: none;
+}
+
+footer ul li i{
+  font-size: 15px;
+  margin: 0.5rem;
+}
+
+footer ul li a{
+  color: black;
+}
