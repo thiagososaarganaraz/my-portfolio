@@ -1,7 +1,8 @@
 import React from "react";
-import sqlIcon from "./assets/sqlIcon.png";
-import sharpIcon from "./assets/sharp.png";
 import "./app.css";
+import noBackgroundLogo from "./assets/png/logo-no-background.png";
+import logoBlack from "./assets/png/logo-black.png";
+import project1 from "./assets/projects/Ecommerce.jpg";
 
 function App() {
   return (
@@ -9,31 +10,80 @@ function App() {
       <header>
         <nav>
           <div className="left-side-nav">
-            <a href="#">Thiago</a>
+            <a href="#">
+              <img src={noBackgroundLogo} />
+            </a>
           </div>
           <div className="right-side-nav">
             <ul>
-              <li>Stack</li>
-              <li>Projects</li>
-              <li>About Me</li>
-              <li>Contact</li>
+              <li>
+                <a href="#">Stack</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">About Me</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
             </ul>
           </div>
         </nav>
         <div className="hero">
           <div className="hero-one">
-            <img></img>
+            <img src={logoBlack} />
           </div>
           <div className="hero-two">
-            <h1>Hello, I'm Thiago</h1>
-            <h2>Fullstack Developer</h2>
+            <h1>Fullstack Developer</h1>
           </div>
         </div>
       </header>
       <div className="body-container">
         <section className="stack">
-          <h1>Technologies Stack</h1>
+          <h1>Stack</h1>
           <ul>
+            <li>
+              <input type="checkbox" />
+              <div>
+                <i className="fa-brands fa-html5"></i>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div>
+                <i className="fa-brands fa-css3-alt"></i>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div>
+                <i className="fa-brands fa-square-js"></i>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div>
+                <i className="fa-brands fa-react"></i>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div>
+                <i className="fa-brands fa-node"></i>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div>C#</div>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <div>SQL</div>
+            </li>
+          </ul>
+          {/* <ul>
             <li>
               <i className="fa-brands fa-html5"></i>
             </li>
@@ -55,54 +105,100 @@ function App() {
             <li>
               <img src={sharpIcon} alt="c sharp icon " />
             </li>
-          </ul>
+          </ul> */}
         </section>
         <section className="projects">
-          <h1>My Projects</h1>
+          <h1>Projects</h1>
           <div className="projects-wrapper">
-            <a href="#">
-              <div className="projects-card">
-                <img src={""} />
-                <h2>Project 1</h2>
-                <p>project description</p>
+            <div className="projects-card">
+              <h2>Punto de Venta</h2>
+              <div className="project-slider">
+                <img src={project1} alt="ecommerce desarrollado en c#" />
               </div>
-            </a>
-            <a href="#">
-              <div className="projects-card">
-                <img src={""} />
-                <h2>Project 1</h2>
-                <p>project description</p>
-              </div>
-            </a>
+              <p>
+                Aplicacion de escritorio para negocios con control de stock,
+                control de usuarios y administradores. Desarrollado en C# y base
+                de datos en SQL Server.
+              </p>
+              <a href="#">View More</a>
+            </div>
+            <div className="projects-card">
+              <img src={""} />
+              <h2>Project 1</h2>
+              <p>project description</p>
+              <a href="#">View More</a>
+            </div>
           </div>
         </section>
         <section className="education">
           <h1>Education</h1>
-          <ul>
-            <li>
-              <i class="fa-solid fa-school"></i>
-              <h3>
-                Técnico en Computación Personal y Profesional Esc. Técnica
-                "Hilda Guerrero de Molina"
-              </h3>
-            </li>
-            <li>
-              <i class="fa-solid fa-building-columns"></i>
-              <h3>Programador Universitario UTN-FRT</h3>
-            </li>
-            <li>
-              <i class="fa-solid fa-code"></i>
-              <h3>NUCBA</h3>
-            </li>
-            <li>
-              <i class="fa-solid fa-building-columns"></i>
-              <h3>Ing. en Sistemas de la Información UTN-FRT</h3>
-            </li>
-            <li>
-              <i class="fa-solid fa-language"></i>
-              <h3>B2 English</h3>
-            </li>
-          </ul>
+          <div className="education-wrapper">
+            <div className="flip-box">
+              <div className="inner-box">
+                <div className="front-box">
+                  <i class="fa-solid fa-school"></i>
+                  <h3>Técnico en Computación Profesional y Personal</h3>
+                </div>
+                <div className="back-box">
+                  <i class="fa-solid fa-school"></i>
+                  <h3>Escuela Técnica "Hilda Guerrero de Molina"</h3>
+                  <h4>2011 - 2018</h4>
+                </div>
+              </div>
+            </div>
+            <div className="flip-box">
+              <div className="inner-box">
+                <div className="front-box">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <h3>Programador Universitario</h3>
+                </div>
+                <div className="back-box">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <h3>Universidad Tecnológica Nacional</h3>
+                  <h4>2021 - 2023</h4>
+                </div>
+              </div>
+            </div>
+            <div className="flip-box">
+              <div className="inner-box">
+                <div className="front-box">
+                  <i class="fa-solid fa-code"></i>
+                  <h3>Fullstack Developer</h3>
+                </div>
+                <div className="back-box">
+                  <i class="fa-solid fa-code"></i>
+                  <h3>Bootcamp NUCBA</h3>
+                  <h4>2021 - 2022</h4>
+                </div>
+              </div>
+            </div>
+            <div className="flip-box">
+              <div className="inner-box">
+                <div className="front-box">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <h3>Ing. en Sistemas de la Información</h3>
+                </div>
+                <div className="back-box">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <h3>Universidad Tecnológica Nacional</h3>
+                  <h4>2019 - 2020</h4>
+                </div>
+              </div>
+            </div>
+            <div className="flip-box">
+              <div className="inner-box">
+                <div className="front-box">
+                  <i class="fa-solid fa-language"></i>
+                  <h3>B2 English</h3>
+                </div>
+                <div className="back-box">
+                  <i class="fa-solid fa-language"></i>
+                  <h3>Instituto Rush</h3>
+                  <h4>2020</h4>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section className="about">
           <h1>About me</h1>
@@ -142,11 +238,11 @@ function App() {
               </a>
             </li>
           </ul>
-          <button>Download Resume</button>
+          <h3>Download my resume</h3>
+          <button>Here!</button>
         </section>
       </div>
       <footer>
-        <h2>Thiago Sosa Argañaraz</h2>
         <ul>
           <li>
             <i className="fa-solid fa-phone"></i>
