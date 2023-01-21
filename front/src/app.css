@@ -21,6 +21,16 @@ html{
   font-family: 'Roboto', sans-serif;
 }
 
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+  background-color: #111;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #555;
+}
+
 /* HEADER */
 
 header{
@@ -33,7 +43,7 @@ nav{
   width: 100%;
   padding: 2rem 0;
   background-color: #111;
-  color: #755BB4;
+  color: white;
   border-bottom: 1px solid #777;
   z-index: 2;
 }
@@ -49,15 +59,25 @@ nav div{
 }
 
 .right-side-nav ul li{
-  margin: 0 1rem;
+  padding: 5px 1rem;
   list-style: none;
   text-align: center;
   align-self: center;
+  transition: ease 0.2s;
+}
+
+.right-side-nav li:hover{
+  border-left: 4px solid salmon;
+  border-radius: 1px;
+}
+
+.right-side-nav ul li:last-child:hover{
+  border-left: none;
 }
 
 .right-side-nav a{
   text-decoration: none;
-  color: #E06F53;
+  color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   text-shadow: 1px 1px 1px #222;
@@ -67,6 +87,7 @@ nav div{
   padding: 7px 10px;
   background-color: #111;
   border: 1px solid #DDD;
+  border-radius: 5px;
   color: #ddd;
   cursor: pointer;
 }
@@ -78,7 +99,6 @@ nav div{
 
 .left-side-nav a img{
   width: 120px;
-  align-self: center;
 }
 
 .left-side-nav a{
@@ -115,20 +135,26 @@ nav div{
   letter-spacing: .05em; /* Adjust as needed */
   font-size: 64px;
   animation: 
-    typing 3.5s steps(40, end),
+    typing 3.5s steps(50, end),
     blink-caret .75s step-end infinite;
 }
 
-.hero-two h2{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #E06F53; /* The typwriter cursor */
+.hero-two{
+  align-self: center;
+}
+
+.hero-two h1{
+  overflow: hidden;
+  width: 0;
+  border-right: .15em solid salmon; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .05em; /* Adjust as needed */
   font-size: 32px;
   animation:
-    typing 3.5s steps(40, end),
+    typing2 3.5s steps(40, end) forwards,
     blink-caret .75s step-end infinite;
+  animation-delay: 3.5s;
   animation-delay: 3.5s;
 }
 
@@ -138,10 +164,15 @@ nav div{
   to { width: 100% }
 }
 
+@keyframes typing2 {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #E06F53; }
+  50% { border-color: salmon; }
 }
 
 .hero-two{
@@ -173,13 +204,31 @@ nav div{
   font-size: 35px;
 }
 
+.stack h3{
+  opacity: .5;
+  color: #999;
+  margin-top: 1rem;
+  animation: blink 6s infinite;
+}
+
+@keyframes blink {
+  0%{
+    opacity: .1;
+  }
+  50%{
+    opacity: .8;
+  }100%{
+    opacity: .1;
+  }
+}
+
 .stack ul {
   position: relative;
   display: flex;
   font-family: 'Poppins', sans-serif;
   justify-content: center;
   padding-inline-start: 0;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 .stack li{
@@ -248,6 +297,35 @@ nav div{
   }
 }
 
+.not-lighted{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.not-lighted div{
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 10px;
+  cursor: default;
+  color: white;
+}
+
+.not-lighted img{
+  width: 60px;
+}
+
+.express{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+.sql{
+  font-family: Arial;
+}
+
 .projects{
   display: flex;
   flex-direction: column;
@@ -266,6 +344,7 @@ nav div{
 
 .projects-wrapper{
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -281,7 +360,7 @@ nav div{
 }
 
 .projects-card h2{
-  font-size: 20px;
+  font-size: 32px;
   margin: 1rem 0;
 }
 
@@ -292,19 +371,40 @@ nav div{
 
 .projects-card a{
   color: #eee;
-  transition: 0.5s;
+  font-size: 24px;
+  margin: 1rem auto;
+  width: 10%;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s;
+  text-decoration: none;
+  padding-left: .3rem;
 }
 
 .projects-card a:hover{
-  color: #ccc;
+  color: #fff;
+  border-left: 3px solid salmon;
+}
+
+.project-info{
+  display: flex;
+  margin: 1rem 3rem;
+  margin-bottom: 0;
+}
+
+.project-info p{
+  align-self: center;
+  font-size: 20px;
+  width: 80%;
 }
 
 .project-slider{
   width: 100%;
+  margin: 1rem;
 }
 
 .project-slider img{
-  width: 90%;
+  width: 100%;
   height: 300px;
 }
 
@@ -324,10 +424,20 @@ nav div{
   font-size: 35px;
 }
 
+.education h2{
+  opacity: .5;
+  color: #999;
+  margin: 1rem;
+  margin-top: 2rem;
+  animation: blink 6s infinite;
+  font-size: 20px;
+}
+
 .education-wrapper{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: 5rem;
+  margin-top: 2rem;
 }
 
 .flip-box{
@@ -452,6 +562,19 @@ nav div{
   list-style: none;
   font-size: 18px;
   margin: 0 1rem;
+  padding: 5px;
+  transition: 0.6s;
+}
+
+.contact ul li:hover{
+  background-color: salmon;
+  border-top: 5px solid white;
+  color: #111;
+  border-radius: 2px;
+}
+
+.contact ul li:hover .contact ul li a{
+  color: #111;
 }
 
 .contact ul li i{
@@ -528,7 +651,17 @@ footer ul li a{
   text-decoration: none;
 }
 
-footer h3{
+.footer-logo{
+  width: 140px;
+  margin: 1rem auto;
+}
+
+.footer-logo img{
+  width: 100%;
+  opacity: .8;
+}
+
+footer h5{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   margin: 1rem;

@@ -5,8 +5,13 @@ import logoBlack from "./assets/png/logo-black.png";
 import logoWhite from "./assets/png/logo-white.png";
 import project1 from "./assets/projects/Ecommerce.jpg";
 import project2 from "./assets/projects/wcweb.png";
+import project3 from "./assets/projects/colibriweb.png";
 import englishCv from "./assets/docs/cvEnglish.pdf";
 import spanishCv from "./assets/docs/cvSpanish.pdf";
+import sequelizeIcon from "./assets/icons/svg/sequelizeIcon.svg";
+import postgresIcon from "./assets/icons/png/postgres.png";
+import muiIcon from "./assets/icons/png/mui.png";
+import styledcoIcon from "./assets/icons/png/styledco.png";
 
 function App() {
   const [spanish, setSpanish] = useState(true);
@@ -23,22 +28,22 @@ function App() {
         <nav>
           <div className="left-side-nav">
             <a href="#">
-              <img src={noBackgroundLogo} />
+              <img src={logoWhite} />
             </a>
           </div>
           <div className="right-side-nav">
             <ul>
               <li>
-                <a href="#">Stack</a>
+                <a href="#stack">Stack</a>
               </li>
               <li>
-                <a href="#">{spanish ? "Proyectos" : "Projects"}</a>
+                <a href="#projects">{spanish ? "Proyectos" : "Projects"}</a>
               </li>
               <li>
-                <a href="#">{spanish ? "About" : "About"}</a>
+                <a href="#about">{spanish ? "About" : "About"}</a>
               </li>
               <li>
-                <a href="#">{spanish ? "Contacto" : "Contact"}</a>
+                <a href="#contact">{spanish ? "Contacto" : "Contact"}</a>
               </li>
               <li>
                 <select onChange={handleSelect}>
@@ -58,17 +63,22 @@ function App() {
             </h1>
           </div>
           <div className="hero-two">
-            <h2>
+            <h1>
               {spanish
                 ? "Soy desarrollador Fullstack"
                 : "I'm a Fullstack Developer"}
-            </h2>
+            </h1>
           </div>
         </div>
       </header>
       <div className="body-container">
-        <section className="stack">
+        <section id="stack" className="stack">
           <h1>Stack</h1>
+          <h3>
+            {spanish
+              ? "Hacé click en los botones del stack para encenderlos!"
+              : "Click on the stack buttons to turn them on!"}
+          </h3>
           <ul>
             <li>
               <input type="checkbox" />
@@ -106,7 +116,32 @@ function App() {
             </li>
             <li>
               <input type="checkbox" />
-              <div>SQL</div>
+              <div className="sql">SQL</div>
+            </li>
+          </ul>
+          <ul className="not-lighted">
+            <li>
+              <div>
+                <img src={sequelizeIcon} />
+              </div>
+            </li>
+            <li>
+              <div className="express">express</div>
+            </li>
+            <li>
+              <div>
+                <img src={postgresIcon} />
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src={muiIcon} />
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src={styledcoIcon} />
+              </div>
             </li>
           </ul>
           {/* <ul>
@@ -133,40 +168,64 @@ function App() {
             </li>
           </ul> */}
         </section>
-        <section className="projects">
+        <section id="projects" className="projects">
           <h1>{spanish ? "Proyectos" : "Projects"}</h1>
           <div className="projects-wrapper">
             <div className="projects-card">
               <h2>{spanish ? "Punto de Venta" : "Sell Point"}</h2>
-              <div className="project-slider">
-                <img src={project1} alt="sell point developed in C#" />
+              <div className="project-info">
+                <div className="project-slider">
+                  <img src={project1} alt="sell point developed in C#" />
+                </div>
+                <p>
+                  {spanish
+                    ? "Aplicacion de escritorio para negocios con control de stock, control de usuarios y administradores. Desarrollada en C# con base de datos en SQL Server."
+                    : "Desktop aplication designed for stores, with stock control, user and admin control. Developed in C# and using SQL Server as Database."}
+                </p>
               </div>
-              {/* <p>
-                
-              </p> */}
-              <p>
-                {spanish
-                  ? "Aplicacion de escritorio para negocios con control de stock, control de usuarios y administradores. Desarrollada en C# con base de datos en SQL Server."
-                  : "Desktop aplication designed for stores, with stock control, user and admin control. Developed in C# and using SQL Server as Database."}
-              </p>
               <a href="#">{spanish ? "Ver más" : "View More"}</a>
             </div>
             <div className="projects-card">
               <h2>WorldCup Qatar 2022 Stats Webpage</h2>
-              <div className="project-slider">
-                <img src={project2} alt="world cup page project" />
+              <div className="project-info">
+                <div className="project-slider">
+                  <img src={project2} alt="world cup page project" />
+                </div>
+                <p>
+                  {spanish
+                    ? "Pagina web de datos en tiempo real del mundial Qatar 2022. Los datos son extraidos de una API, desarrollado con HTML, CSS, JS, React y NodeJS con ExpressJS."
+                    : "Qatar Worldcup real-time stats webpage. Data is extracted from an API. It is developed in HTML, CSS, JS, React and NodeJS with ExpressJS."}
+                </p>
               </div>
-              <p>
+              <a href="#">{spanish ? "Ver más" : "View More"}</a>
+            </div>
+            <div className="projects-card">
+              <h2>
                 {spanish
-                  ? "Pagina web de datos en tiempo real del mundial Qatar 2022. Los datos son extraidos de una API, desarrollado con HTML, CSS, JS, React y NodeJS con ExpressJS."
-                  : "Qatar Worldcup real-time stats webpage. Data is extracted from an API. It is developed in HTML, CSS, JS, React and NodeJS with ExpressJS."}
-              </p>
+                  ? "Tienda de ropa Colibri (Ecommerce)"
+                  : "Colibri Web Store (Ecommerce)"}
+              </h2>
+              <div className="project-info">
+                <div className="project-slider">
+                  <img src={project3} alt="colibri web store" />
+                </div>
+                <p>
+                  {spanish
+                    ? "Ecommerce para una tienda de venta de ropa sublimada. Desarrollado en Javascript, con React y Redux para el frontend, Node js, Express Sequelize y Postgres para el backend."
+                    : "Sublimated clothes store Ecommerce. Developed in Javascript, with React and Redux for the frontend, and Node, Express, Sequelize and Postgres for the backend."}
+                </p>
+              </div>
               <a href="#">{spanish ? "Ver más" : "View More"}</a>
             </div>
           </div>
         </section>
-        <section className="education">
+        <section id="education" className="education">
           <h1>{spanish ? "Educación" : "Education"}</h1>
+          <h2>
+            {spanish
+              ? "Toca las tarjetas para ver más información"
+              : "Touch the cards to see more info"}
+          </h2>
           <div className="education-wrapper">
             <div className="flip-box">
               <div className="inner-box">
@@ -257,7 +316,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="about">
+        <section id="about" className="about">
           <h1>{spanish ? "Acerca de mi" : "About me"}</h1>
           <div>
             <p>
@@ -278,7 +337,7 @@ function App() {
             {/* <p>In my free time i love to play and listen to music. I play the guitar, piano and also sing. I like to read books and workout, once a week i'm a volleyball player.</p> */}
           </div>
         </section>
-        <section className="contact">
+        <section id="contact" className="contact">
           <h1>{spanish ? "Contactame!" : "Get in touch!"}</h1>
           <ul>
             <li>
@@ -307,6 +366,9 @@ function App() {
         </section>
       </div>
       <footer>
+        <div className="footer-logo">
+          <img src={logoWhite} />
+        </div>
         <ul>
           <li>
             <i className="fa-solid fa-phone"></i>
@@ -323,7 +385,7 @@ function App() {
             </a>
           </li>
         </ul>
-        <h3>Thiago Sosa Argañaraz ©</h3>
+        <h5>Thiago Sosa Argañaraz ©</h5>
       </footer>
     </div>
   );
