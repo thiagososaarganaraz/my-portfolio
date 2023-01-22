@@ -18,6 +18,7 @@ html{
 .container{
   display: flex;
   flex-direction: column;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -90,6 +91,10 @@ nav div{
   border-radius: 5px;
   color: #ddd;
   cursor: pointer;
+}
+
+.menu-btn{
+  display: none;
 }
 
 .left-side-nav{
@@ -665,4 +670,206 @@ footer h5{
   font-family: 'Raleway', sans-serif;
   text-align: center;
   margin: 1rem;
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  background-color: #111;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.menu a{
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 0;
+  border: 1px solid #777;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  transition: 0.4s;
+  border-left: 4px solid salmon;
+}
+.menu a:hover{
+  background-color: white;
+  color: #111;
+  border-left: 8px solid salmon;
+}
+.menu select{
+  text-align: center;
+  background-color: #111;
+  color: white;
+  padding: .7rem 0;
+  border: 1px solid #777;
+  border-left: none;
+  border-right: none;
+  font-family: roboto;
+  font-size: 18px;
+}
+.menu i{
+  font-size: 20px;
+  color: #aaa;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.menu h3{
+  font-size: 16px;
+  text-align: center;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.menu div{
+  width: 160px;
+  margin: 1rem auto;
+}
+.menu div img{
+  width: 100%;
+}
+
+.menu button{
+  background-color: transparent;
+  border: none;
+  width: auto;
+  color: white;
+  margin: 1rem 90%;
+}
+
+.menu button i{
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 576px) {
+  .container{
+    display: flex;
+    width: 100%;
+  }
+  nav{
+    position: relative;
+  }
+  .right-side-nav li{
+    display: none;
+  }
+  .menu-btn{
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+  }
+  nav div{
+    margin: auto 1rem;
+  }
+  nav button{
+    margin: auto 80%;
+  }
+
+  .hero{
+    height: 40vh;
+  }
+  .hero-one h1{
+    font-size: 30px;
+    
+  }
+  .hero-two h1{
+    font-size: 21px;
+  }
+
+  .stack{
+    height: auto;
+    padding: 2rem 0;
+    margin: 0;
+  }
+  .stack ul{
+    flex-wrap: wrap;
+    margin: auto 0;
+  }
+
+  .projects{
+    padding: 0;
+  }
+  .projects-card{
+    margin: 1rem 5px;
+  }
+  .projects-card h2{
+    font-size: 22px;
+  }
+  .project-info{
+    margin: 0;
+    flex-direction: column;
+  }
+  .project-slider{
+    margin: 0;
+    height: 240px;
+  }
+  .project-info img{
+    height: 100%;
+  }
+  .projects-card a{
+    width: auto;
+  }
+  .education{
+    padding: 1rem 0;
+  }
+  .education h2{
+    margin: 2rem 0;
+  }
+  .education-wrapper{
+    margin: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .education-wrapper i{
+    font-size: 32px;
+  }
+  .education-wrapper h3 {
+    font-size: 24px;
+  }
+
+  .about{
+    padding: 2rem 0;
+  }
+  .about div{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem 2rem;
+    grid-gap: 1rem;
+  }
+  .about div p{
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+
+  .contact{
+    padding: 2rem 0;
+  }
+  .contact ul{
+    margin: 0;
+    margin-bottom: 2rem;
+    flex-direction: column;
+  }
+  .resumeDownload{
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+  }
+
+  footer ul{
+    flex-direction: column;
+    margin: 0;
+  }
+  .footer-logo{
+    width: 100px;
+  }
 }

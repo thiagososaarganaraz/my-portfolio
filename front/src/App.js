@@ -15,6 +15,7 @@ import styledcoIcon from "./assets/icons/png/styledco.png";
 
 function App() {
   const [spanish, setSpanish] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   const handleSelect = (e) => {
     setSpanish(!spanish);
@@ -22,8 +23,41 @@ function App() {
 
   useEffect(() => {}, [spanish]);
 
+  const handleMenu = () => {
+    setMenu(!menu);
+  };
+
   return (
     <div className="container">
+      <div
+        className="menu"
+        style={menu ? { display: "flex" } : { display: "none" }}
+      >
+        <button>
+          <i class="fa-solid fa-x" onClick={handleMenu}></i>
+        </button>
+        <div>
+          <img src={logoWhite} />
+        </div>
+        <a href="#stack" onClick={handleMenu}>
+          {spanish ? "Stack" : "Stack"}
+        </a>
+        <a href="#projects" onClick={handleMenu}>
+          {spanish ? "Proyecto" : "Project"}
+        </a>
+        <a href="#about" onClick={handleMenu}>
+          {spanish ? "About" : "About"}
+        </a>
+        <a href="#contact" onClick={handleMenu}>
+          {spanish ? "Contacto" : "Contact"}
+        </a>
+        <i class="fa-solid fa-globe"></i>
+        <h3>{spanish ? "Idioma" : "Language"}</h3>
+        <select onChange={handleSelect}>
+          <option value={true}>Spanish</option>
+          <option value={false}>English</option>
+        </select>
+      </div>
       <header>
         <nav>
           <div className="left-side-nav">
@@ -52,6 +86,9 @@ function App() {
                 </select>
               </li>
             </ul>
+            <button className="menu-btn" onClick={handleMenu}>
+              <i className="fa-sharp fa-solid fa-bars"></i>
+            </button>
           </div>
         </nav>
         <div className="hero">
@@ -366,26 +403,10 @@ function App() {
         </section>
       </div>
       <footer>
+        <h5>Thiago Sosa Argañaraz ©</h5>
         <div className="footer-logo">
           <img src={logoWhite} />
         </div>
-        <ul>
-          <li>
-            <i className="fa-solid fa-phone"></i>
-            <h4>+54 3863693540</h4>
-          </li>
-          <li>
-            <i className="fa-solid fa-envelope"></i>
-            <h4>thiagososaarganaraz@gmail.com</h4>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa-brands fa-linkedin"></i>
-              <h4>Thiago Sosa Argañaraz</h4>
-            </a>
-          </li>
-        </ul>
-        <h5>Thiago Sosa Argañaraz ©</h5>
       </footer>
     </div>
   );
