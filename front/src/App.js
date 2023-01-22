@@ -43,7 +43,7 @@ function App() {
           {spanish ? "Stack" : "Stack"}
         </a>
         <a href="#projects" onClick={handleMenu}>
-          {spanish ? "Proyecto" : "Project"}
+          {spanish ? "Proyecto" : "Projects"}
         </a>
         <a href="#about" onClick={handleMenu}>
           {spanish ? "About" : "About"}
@@ -209,34 +209,6 @@ function App() {
           <h1>{spanish ? "Proyectos" : "Projects"}</h1>
           <div className="projects-wrapper">
             <div className="projects-card">
-              <h2>{spanish ? "Punto de Venta" : "Sell Point"}</h2>
-              <div className="project-info">
-                <div className="project-slider">
-                  <img src={project1} alt="sell point developed in C#" />
-                </div>
-                <p>
-                  {spanish
-                    ? "Aplicacion de escritorio para negocios con control de stock, control de usuarios y administradores. Desarrollada en C# con base de datos en SQL Server."
-                    : "Desktop aplication designed for stores, with stock control, user and admin control. Developed in C# and using SQL Server as Database."}
-                </p>
-              </div>
-              <a href="#">{spanish ? "Ver más" : "View More"}</a>
-            </div>
-            <div className="projects-card">
-              <h2>WorldCup Qatar 2022 Stats Webpage</h2>
-              <div className="project-info">
-                <div className="project-slider">
-                  <img src={project2} alt="world cup page project" />
-                </div>
-                <p>
-                  {spanish
-                    ? "Pagina web de datos en tiempo real del mundial Qatar 2022. Los datos son extraidos de una API, desarrollado con HTML, CSS, JS, React y NodeJS con ExpressJS."
-                    : "Qatar Worldcup real-time stats webpage. Data is extracted from an API. It is developed in HTML, CSS, JS, React and NodeJS with ExpressJS."}
-                </p>
-              </div>
-              <a href="#">{spanish ? "Ver más" : "View More"}</a>
-            </div>
-            <div className="projects-card">
               <h2>
                 {spanish
                   ? "Tienda de ropa Colibri (Ecommerce)"
@@ -252,7 +224,47 @@ function App() {
                     : "Sublimated clothes store Ecommerce. Developed in Javascript, with React and Redux for the frontend, and Node, Express, Sequelize and Postgres for the backend."}
                 </p>
               </div>
-              <a href="#">{spanish ? "Ver más" : "View More"}</a>
+              <a
+                href="https://github.com/AgustinSaraspe/ecommerceDeRopa"
+                target="_blank"
+              >
+                {spanish ? "Ver más" : "View More"}
+              </a>
+            </div>
+            <div className="projects-card">
+              <h2>WorldCup Qatar 2022 Stats Webpage</h2>
+              <div className="project-info">
+                <div className="project-slider">
+                  <img src={project2} alt="world cup page project" />
+                </div>
+                <p>
+                  {spanish
+                    ? "Pagina web de datos en tiempo real del mundial Qatar 2022. Los datos son extraidos de una API, desarrollado con HTML, CSS, JS, React y NodeJS con ExpressJS."
+                    : "Qatar Worldcup real-time stats webpage. Data is extracted from an API. It is developed in HTML, CSS, JS, React and NodeJS with ExpressJS."}
+                </p>
+              </div>
+              <a href="https://github.com/thiaguetas/qatar-wc" target="_blank">
+                {spanish ? "Ver más" : "View More"}
+              </a>
+            </div>
+            <div className="projects-card">
+              <h2>{spanish ? "Punto de Venta" : "Sell Point"}</h2>
+              <div className="project-info">
+                <div className="project-slider">
+                  <img src={project1} alt="sell point developed in C#" />
+                </div>
+                <p>
+                  {spanish
+                    ? "Aplicacion de escritorio para negocios con control de stock, control de usuarios y administradores. Desarrollada en C# con base de datos en SQL Server."
+                    : "Desktop aplication designed for stores, with stock control, user and admin control. Developed in C# and using SQL Server as Database."}
+                </p>
+              </div>
+              <a
+                href="https://github.com/AgustinSaraspe/SISTEMA_PUNTO_DE_VENTAS"
+                target="_blank"
+              >
+                {spanish ? "Ver más" : "View More"}
+              </a>
             </div>
           </div>
         </section>

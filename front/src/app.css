@@ -213,7 +213,7 @@ nav div{
   opacity: .5;
   color: #999;
   margin-top: 1rem;
-  animation: blink 6s infinite;
+  animation: blink 3s infinite;
 }
 
 @keyframes blink {
@@ -779,11 +779,11 @@ footer h5{
     height: 40vh;
   }
   .hero-one h1{
-    font-size: 30px;
+    font-size: 26px;
     
   }
   .hero-two h1{
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .stack{
@@ -794,6 +794,9 @@ footer h5{
   .stack ul{
     flex-wrap: wrap;
     margin: auto 0;
+  }
+  .stack h3{
+    margin: 1rem 0;
   }
 
   .projects{
