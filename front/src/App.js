@@ -398,7 +398,10 @@ function App() {
               <h4>thiagososaarganaraz@gmail.com</h4>
             </li>
             <li>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/thiago-sosa-arga%C3%B1araz-b26034214/"
+                target="_blank"
+              >
                 <i className="fa-brands fa-linkedin"></i>
                 <h4>Thiago Sosa Argañaraz</h4>
               </a>
