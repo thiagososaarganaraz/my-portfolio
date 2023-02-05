@@ -12,6 +12,7 @@ import sequelizeIcon from "./assets/icons/svg/sequelizeIcon.svg";
 import postgresIcon from "./assets/icons/png/postgres.png";
 import muiIcon from "./assets/icons/png/mui.png";
 import styledcoIcon from "./assets/icons/png/styledco.png";
+import reduxIcon from "./assets/icons/png/redux.png";
 
 function App() {
   const [spanish, setSpanish] = useState(true);
@@ -178,6 +179,11 @@ function App() {
             <li>
               <div>
                 <img src={styledcoIcon} />
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src={reduxIcon} />
               </div>
             </li>
           </ul>
