@@ -6,6 +6,7 @@ import logoWhite from "./assets/png/logo-white.png";
 import project1 from "./assets/projects/Ecommerce.jpg";
 import project2 from "./assets/projects/wcweb.png";
 import project3 from "./assets/projects/colibriweb.png";
+import project4 from "./assets/projects/golf.png";
 import englishCv from "./assets/docs/cvEnglish.pdf";
 import spanishCv from "./assets/docs/cvSpanish.pdf";
 import sequelizeIcon from "./assets/icons/svg/sequelizeIcon.svg";
@@ -215,6 +216,25 @@ function App() {
           <h1>{spanish ? "Proyectos" : "Projects"}</h1>
           <div className="projects-wrapper">
             <div className="projects-card">
+              <h2>GOLF Landing Page</h2>
+              <div className="project-info">
+                <div className="project-slider">
+                  <img src={project4} alt="GOLF Landing Page" />
+                </div>
+                <p>
+                  {spanish
+                    ? "Landing page para la marca GOLF. Diseño y maquetado realizado en Figma, Desarrollada en React."
+                    : "Qatar Worldcup real-time stats webpage. Data is extracted from an API. Frontend developed in React and Backend in NodeJS with ExpressJS."}
+                </p>
+              </div>
+              <a href="https://golfwang.netlify.app" target="_blank">
+                {spanish ? "Ver pagina" : "View page"}
+              </a>
+              <a href="https://github.com/thiaguetas/golflandingpage">
+                {spanish ? "Ver repositorio" : "View repository"}
+              </a>
+            </div>
+            <div className="projects-card">
               <h2>
                 {spanish
                   ? "Tienda de ropa Colibri (Ecommerce)"
@@ -245,8 +265,8 @@ function App() {
                 </div>
                 <p>
                   {spanish
-                    ? "Pagina web de datos en tiempo real del mundial Qatar 2022. Los datos son extraidos de una API, desarrollado con HTML, CSS, JS, React y NodeJS con ExpressJS."
-                    : "Qatar Worldcup real-time stats webpage. Data is extracted from an API. It is developed in HTML, CSS, JS, React and NodeJS with ExpressJS."}
+                    ? "Pagina web de datos en tiempo real del mundial Qatar 2022. Los datos son extraidos de una API externa, Front End desarrollado con React y Backend con Node.js y Express.js."
+                    : "Qatar Worldcup real-time stats webpage. Data is extracted from an API. Frontend developed in React and Backend in NodeJS with ExpressJS."}
                 </p>
               </div>
               <a href="https://github.com/thiaguetas/qatar-wc" target="_blank">
